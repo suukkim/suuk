@@ -5,7 +5,7 @@ User-agent: *
 Allow: /
 
 # Sitemap 위치
-Sitemap: https://feeldizdi.github.io/feeldiz_di/sitemap.xml
+Sitemap: https://suukkim.github.io/suuk/sitemap.xml
 
 # Google 검색 로봇 (모두 허용)
 User-agent: Googlebot
