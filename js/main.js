@@ -1150,14 +1150,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
             let section = 'home';
 
-            if (redirectSection && ['works', 'facility', 'about', 'contact'].includes(redirectSection)) {
+            if (redirectSection && ['works'].includes(redirectSection)) {
                 section = redirectSection;
                 // Clean up URL by removing redirect parameter
                 window.history.replaceState({section: section}, '', `/feeldiz_di/${section}`);
             } else {
                 const path = window.location.pathname;
                 const pathSection = path.split('/').pop();
-                if (['works', 'facility', 'about', 'contact'].includes(pathSection)) {
+                if (['works'].includes(pathSection)) {
                     section = pathSection;
                 }
             }
