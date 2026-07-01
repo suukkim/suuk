@@ -970,7 +970,7 @@ function showSection(sectionName, skipHistory = false) {
         const scrollToTopBtn = document.getElementById('scrollToTop');
 
         // Update URL without page reload (skip if triggered by popstate)
-        const path = sectionName === 'home' ? '/feeldiz_di/' : `/feeldiz_di/${sectionName}`;
+        const path = sectionName === 'home' ? '/suuk/' : `/suuk/${sectionName}`;
 
         if (!skipHistory) {
             try {
@@ -1137,7 +1137,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Set initial history state (wrapped in try-catch for compatibility)
         try {
-            window.history.replaceState({section: 'home'}, '', '/feeldiz_di/');
+            window.history.replaceState({section: 'home'}, '', '/suuk/');
         } catch (e) {
             logger.log('History API not available in this context');
         }
@@ -1153,7 +1153,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (redirectSection && ['works'].includes(redirectSection)) {
                 section = redirectSection;
                 // Clean up URL by removing redirect parameter
-                window.history.replaceState({section: section}, '', `/feeldiz_di/${section}`);
+                window.history.replaceState({section: section}, '', `/suuk/${section}`);
             } else {
                 const path = window.location.pathname;
                 const pathSection = path.split('/').pop();
